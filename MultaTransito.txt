@@ -1,0 +1,28 @@
+package aula7;
+
+import java.util.Scanner;
+
+public class MultaTransito2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		float  velVeiculo, velVia;
+		System.out.println("Digite a velocidade da via :");
+		velVia = sc.nextFloat();
+		System.out.println("Digite a velocidade do veiculo : ");
+		velVeiculo = sc.nextFloat();
+		
+		if ( velVeiculo > velVia) {
+			if (velVeiculo <= (velVia*1.2) ) {
+				System.out.println("Multa de R$ 85.13 e 4 pontos na carteira");
+			}if (velVeiculo > (velVia*1.2) && velVeiculo <= (velVia*1.5)) {
+					System.out.println("Multa de  127.69  e 5  pontos na carteira");
+			}if (velVeiculo > (velVia*1.5)) {
+					System.out.println("Multa de  574.62  e 7  pontos na carteira, apreensao da carteira ");			
+		
+			}
+		} else {
+		System.out.println("sem multa");	
+		}
+	}
+
+}
